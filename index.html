@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
+    <script src="./manifest.json"></script>
+</head>
+<!--
+    약간의 반응형 적용.
+    font-size . . . 
+-->
+<script>
+    if ('serviceWorker' in navigator) {
+        // navigator.serviceWorker.register - 서비스 워커를 등록
+        navigator.serviceWorker.register('service-worker.js')// 등록
+            .then(function (succese) {
+                console.log(succese)
+            }).catch(function (error) {
+                console.log('실패ㅠ', error)
+            })
+    }
+</script>
+
+<body>
+    <div class="all_container">
+        <header class="header">
+            <div class="inner">
+                <h1></h1>
+                <nav class="header_nav">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-globe"></i>
+                        </li>
+                        <li>
+                            <div class="menu_btn">
+                                <span class="bar1"></span>
+                                <span class="bar2"></span>
+                                <span class="bar3"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="header_menu_wrap">
+            <div class="close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="inner">
+                <div class="top_menu">
+                    <div class="menu_item">홈</div>
+                    <div class="menu_item">소개</div>
+                    <div class="menu_item">클라우드</div>
+                    <div class="menu_item">미디어</div>
+                </div>
+                <div class="bottom_menu">
+                    <div class="left_item">
+                        <a href='' class="img_wrap">
+                            <img src="img/naver.png" alt="">
+                        </a>
+                        <a href='' class="img_wrap">
+                            <img src='img/naver_pl.jpg' alt="">
+                        </a>
+                    </div>
+                    <div class="right_item">
+                        <a href="naver_box_login.html" class="img_wrap naver_box">
+                            <img src="img/naver_box.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="advertise">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="visual_bg item1">
+                            <video loop autoplay muted playsinLine poster="">
+                                <source src="./img/visual_video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="inner">
+                            <h2>네이버 클라우드<br>
+                                서밋 2022<br>
+                                지금 바로 신청하세요
+                            </h2>
+                            <a href="">
+                                <p>사전 등록하기</p>
+                                <i class="fa-solid fa-arrow-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="visual_bg item2"></div>
+                        <div class="inner">
+                            <h2>모든 비즈니스를<br>
+                                가능하게 하는<br>
+                                네이버클라우드
+                            </h2>
+                            <a href="">
+                                <p><span>NAVER</span> CLOUD PLATFORM</p>
+                                <i class="fa-solid fa-arrow-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="visual_bg item3"></div>
+                        <div class="inner">
+                            <h2>개인용 스토리지<br>
+                                ‘네이버 클라우드’가 <br>
+                                ‘네이버 MYBOX’로 <br>
+                                변경되었습니다
+                            </h2>
+                            <a href="">
+                                <p>네이버 MYBOX 바로가기</p>
+                                <i class="fa-solid fa-arrow-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="visual_bg item4"></div>
+                        <div class="inner">
+                            <h2>클라우드를 ‘직접’ 만듭니다<br>
+                                클라우드를 ‘함께’ 만듭시다
+                            </h2>
+                            <a href="">
+                                <p>채용 바로가기</p>
+                                <i class="fa-solid fa-arrow-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><i class="fa-sharp fa-solid fa-arrow-left"></i></div>
+                <div class="swiper-button-next"><i class="fa-sharp fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <main>
+            <section class="section1">
+                <div class="sec1_ani">
+                    <div class="sec1_ani_wrap">
+                        <h2>
+                            <p>네이버클라우드는</p>
+                            <p>고객과 가장 가까운 곳에서</br>
+                                성장의 돌파구를 마련하는
+                            </p>
+                            <p>대한민국 대표</br>
+                                클라우드 기업입니다</p>
+                        </h2>
+                        <a href="">
+                            <span>소개 바로가기</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="inner">
+                    <h1><img src="./img/main_logo.svg" alt=""></h1>
+                    <div class="con_wrap">
+                        <div class="content">
+                            <p class="text">1초당 네이버 검색 횟수</p>
+                            <p class="number num1">0</p>
+                        </div>
+                        <div class="content">
+                            <p class="text">1초당 네이버 이메일</br>
+                                전송 횟수
+                            </p>
+                            <p class="number num2">0</p>
+                        </div>
+                        <div class="content">
+                            <p class="text">1초당 네이버 MYBOX</br>
+                                이미지 업로드 수
+                            </p>
+                            <p class="number num3">0</p>
+                        </div>
+                        <div class="content">
+                            <p class="text">1초당 네이버 지식in</br>
+                                등록 건수
+                            </p>
+                            <p class="number num4">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="inner">
+                    <h1>
+                        <p>네이버 클라우드는</p>
+                        <p>다양한 산업과 규모에 맞춘<br />
+                            솔루션 서비스로
+                        </p>
+                        <p>고객의 비즈니스를<br />
+                            성공으로 이끕니다.
+                        </p>
+                    </h1>
+                    <button>
+                        <span class="text">소개 바로가기</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <ul class="vert">
+                        <li class="item1">
+                            <p>Media</p>
+                        </li>
+                        <li class="item2">
+                            <p>Finance</p>
+                        </li>
+                        <li class="item3">
+                            <p>Education</p>
+                        </li>
+                        <li class="item4">
+                            <p>Work</p>
+                        </li>
+                        <li class="item5">
+                            <p>Hybrid Cloud</p>
+                        </li>
+                        <li class="item6">
+                            <p>Ai</p>
+                        </li>
+                        <li class="item1">
+                            <p>Media</p>
+                        </li>
+                        <li class="item2">
+                            <p>Finance</p>
+                        </li>
+                        <li class="item3">
+                            <p>Education</p>
+                        </li>
+                        <li class="item4">
+                            <p>Work</p>
+                        </li>
+                        <li class="item5">
+                            <p>Hybrid Cloud</p>
+                        </li>
+                        <li class="item6">
+                            <p>Ai</p>
+                        </li>
+                    </ul>
+                    <ul class="hori">
+                        <li class="item1">
+                            <p>Big Data</p>
+                        </li>
+                        <li class="item2">
+                            <p>Manufacturing</p>
+                        </li>
+                        <li class="item3">
+                            <p>E-Commerce</p>
+                        </li>
+                        <li class="item4">
+                            <p>Healthcare</p>
+                        </li>
+                        <li class="item5">
+                            <p>Public Sector</p>
+                        </li>
+                        <li class="item6">
+                            <p>Game</p>
+                        </li>
+                        <li class="item1">
+                            <p>Big Data</p>
+                        </li>
+                        <li class="item2">
+                            <p>Manufacturing</p>
+                        </li>
+                        <li class="item3">
+                            <p>E-Commerce</p>
+                        </li>
+                        <li class="item4">
+                            <p>Healthcare</p>
+                        </li>
+                        <li class="item5">
+                            <p>Public Sector</p>
+                        </li>
+                        <li class="item6">
+                            <p>Game</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section3">
+                <div class="bg_dark"></div>
+                <div class="bg_video">
+                    <video loop autoplay muted playsinLine poster="">
+                        <source src="img/sec_3_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="inner">
+                    <h1>IT생태계</h1>
+                    <P>모두가 함께 성장할 수 있는 클라우드 기반의<br />
+                        선순환 생태계를 구축합니다.
+                    </P>
+                    <img src="img/sec_3_01.png" alt="">
+                    <button>
+                        <span class="text">IT생태계 바로가기</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="section4">
+                <div class="inner">
+                    <h2><span>네이버클라우드</span>의<br />
+                        새로운 소식을 만나 보세요</h2>
+                    <div class="news_wrap">
+                        <div class="top sec4_ani">
+                            <article>
+                                <a href="">
+                                    <img src="./img/sec_4_01.png" alt="">
+                                    <div class="news_title">네이버클라우드 최상위 인증기관(RootCA) 인증서, 국내 최초로 전세계 주요 OS 및 브라우저에 탑재
+                                    </div>
+                                    <button class="news_btn">
+                                        <p>자세히 보기</p>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </article>
+                            <article>
+                                <a href="">
+                                    <img src="./img/sec_4_02.png" alt="">
+                                    <div class="news_title">'네이버클라우드 서밋 2022’ 개최, 혁신에 안정성 더한 네이버클라우드 기술력과 서비스 노하우 공유
+                                    </div>
+                                    <button class="news_btn">
+                                        <p>자세히 보기</p>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="bottom sec4_ani">
+                            <article>
+                                <a href="">
+                                    <img src="./img/sec_4_03.png" alt="">
+                                    <div class="news_title">네이버클라우드, 부산 ‘지스타 2022’서 게임사와 소통 나선다</div>
+                                    <button class="news_btn">
+                                        <p>자세히 보기</p>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </article>
+                            <article>
+                                <a href="">
+                                    <img src="./img/sec_4_04.png" alt="">
+                                    <div class="news_title">네이버클라우드, NIA ‘국제IT협력프로젝트’ AI 기반 스마트팜 사업에 클라우드 인프라 지원</div>
+                                    <button class="news_btn">
+                                        <p>자세히 보기</p>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section5">
+                <div class="inner">
+                    <div class="partner item">
+                        <div class="ani_box">
+                            <div class="ani_box_item">제휴</div>
+                            <div class="ani_box_item">조회</div>
+                        </div>
+                        <h2>Partnership Proposal</h2>
+                        <p class="title">다양한 사업 및</br>
+                            서비스 제휴를 기다립니다</p>
+                        <a href="" class="btn">
+                            <p class="text">함께 성장하기</p>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="career_positon">
+                        <div class="career item">
+                            <a href="" class="ani_box">
+                                <div class="img_area"></div>
+                                <div class="text">
+                                    <p>경력 18년차 개발자의 하루</p>
+                                    <p class="sub">PaaS플랫폼/서비스 개발자</p>
+                                </div>
+                            </a>
+                            <h2>Career</h2>
+                            <p class="title">클라우드를 '직접' 만듭시다</br>
+                                클라우드를 '함께' 만듭시다</p>
+                            <a href="" class="btn">
+                                <p class="text">채용 바로가기</p>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="ft_top">
+                    <form action="">
+                        <input type="text" placeholder="궁금한 내용은?">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div class="family_site">
+                        <span>Family Site</span>
+                        <div class="on_family_site">
+                            <a href="">네이버</a>
+                            <a href="">네이버랩스</a>
+                            <a href="">웍스모바일</a>
+                            <a href="">라인</a>
+                            <a href="">네이버 클로바</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_bottom">
+                    <div class="sns">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-line"></i></a>
+                    </div>
+                    <div class="text_area">
+                        <p><span>사업자등록번호:</span>129-86-31394</p>
+                        <p><span>통신판매업신고번호:</span>제2009-경기성남-0510호</p>
+                        <p><span>공동대표:</span>박원기, 김유원</p>
+                        <p><span>주소:</span>경기도 성남시 분당구 분당내곡로 13 <br>
+                            1판교테크원 타워1 13~15층, 13529</p>
+                        <span>ⓒ NAVER Cloud Corp. All Rights Reserved. </span>
+                    </div>
+                    <h1 class="logo">
+                        <img src="img/main_logo.svg" alt="">
+                    </h1>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

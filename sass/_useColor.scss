@@ -1,0 +1,26 @@
+$main_color: #03C75A;
+$sub_color: #4078FF;
+
+@mixin white_btn {
+    transition: all 0.5s;
+    background-color: white;
+    color: $main_color;
+}
+
+@mixin main_btn {
+    transition: all 0.5s;
+    background-color: $main_color;
+    color: white;
+}
+
+@mixin outline_btn {
+    transition: all 0.5s;
+    background-color: white;
+    color: $main_color;
+    border: 2px solid $main_color;
+}
+@mixin sub_white_btn {
+    transition: all 0.5s;
+    background-color: white;
+    color: $sub_color;
+}

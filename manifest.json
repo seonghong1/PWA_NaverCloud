@@ -1,0 +1,51 @@
+{
+  "background_color": "#ffffff",
+  "description": "PWA프로젝트 입니다.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "naverCloud_box",
+  "short_name": "naverCloud",
+  "orientation": "any",
+  "scope": "https://seonghong1.github.io/NaverCloud/",
+  "start_url": "https://seonghong1.github.io/NaverCloud/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [
+    {
+      "src": "images/scr1.png",
+      "sizes": "359x736",
+      "type": "image/png"
+    },
+    {
+      "src": "images/scr2.png",
+      "sizes": "356x736",
+      "type": "image/png"
+    },
+    {
+      "src": "images/scr3.png",
+      "sizes": "359x735",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "img/icon_b.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon_r.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon_s.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": []
+}

@@ -1,0 +1,220 @@
+.header {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    max-width: 650px;
+    min-width: 300px;
+    height: 60px;
+    background-color: transparent;
+
+    .inner {
+        display: flex;
+        padding: 0 15px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        h1 {
+            width: 180px;
+            height: 20px;
+            background-image: url(../img/main_logo_w.svg);
+        }
+    }
+}
+
+.header_nav {
+    ul {
+        display: flex;
+
+        li {
+            cursor: pointer;
+
+            &:last-of-type {
+                margin-left: 15px;
+            }
+        }
+
+        ;
+    }
+
+    i {
+        color: white;
+        font-size: 22px
+    }
+
+    ;
+
+    .menu_btn {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 20;
+
+        span {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+        }
+    }
+}
+
+.header.on {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    h1 {
+        background-image: url(../img/main_logo.svg);
+    }
+
+    .header_nav i {
+        color: #03C75A;
+    }
+
+    .menu_btn span {
+        background-color: #03C75A;
+    }
+}
+
+//******headermenu************
+.header_menu_wrap {
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    opacity: 0;
+    transition: all 0.5s;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+    max-width: 650px;
+    min-width: 300px;
+    margin: 0 auto;
+
+    .close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .inner {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 80px 30px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top_menu {
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .menu_item {
+            cursor: pointer;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(240, 239, 239);
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+            font-size: 25px;
+            color: #777777;
+            font-weight: 700;
+            height: calc((100% / 4) - 10px);
+
+            &:hover {
+                @include main_btn;
+            }
+        }
+    }
+
+    .bottom_menu {
+        height: 43%;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            ;
+            border: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .left_item {
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .img_wrap {
+                height: 49%;
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .right_item {
+            width: 49%;
+
+            .img_wrap {
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    .advertise {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        bottom: 7px;
+        right: 0;
+        background-color: white;
+        width: 97%;
+        max-width: 630px;
+        min-width: 280px;
+        height: 80px;
+        margin: 0 auto;
+        background-color: rgb(226, 243, 226);
+
+        .swiper-slide {
+            
+            background: {
+                image: url(../img/광고1.jpg);
+                size: contain;
+                repeat: no-repeat;
+                background-position: top center;
+            }
+            &:nth-of-type(2){
+                background-image: url(../img/광고2.jpg);
+            }
+            &:nth-of-type(3){
+                background-image: url(../img/광고3.jpg);
+            }
+        }
+    }
+}

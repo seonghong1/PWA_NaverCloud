@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./js/naver_box.js"></script>
+    <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<!--
+    큰 이미지 노출 -> 공유버튼 클릭시 카카오톡 공유하기(카카오톡 공유API사용)
+-->
+
+<body>
+    <!--******네이버 박스 메뉴 입니다 !!*****-->
+    <div class="naber_box_menu">
+        <div class="close"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="top_area">
+            <div class="user">
+                <h1>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>사용자</span>
+                </h1>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="storage">
+                <p>10GB <span>/ 30GB</span></p>
+                <p class="buy">이용권 구매</p>
+                <span class="storage_bar"></span>
+                <p>여유공간 20GB</p>
+            </div>
+        </div>
+        <div class="midle_area">
+            <ul>
+                <li><a href=""><i class="fa-regular fa-circle-down"></i><span>올리기·내려받기</span></a></li>
+                <li><a href=""><i class="fa-solid fa-users-viewfinder"></i><span>함께보기</span></a></li>
+                <li><a href=""><i class="fa-solid fa-box-open"></i><span>보관함</span></a></li>
+                <li><a href=""><i class="fa-regular fa-paste"></i><span>파일정리</span></a></li>
+                <li><a href=""><i class="fa-regular fa-trash-can"></i><span>휴지통</span></a></li>
+                <li><a href="naver_box_event.html"><i class="fa-solid fa-gift"></i><span>이벤트</span></a></li>
+                <li><a href=""><i class="fa-solid fa-gear"></i><span>설정</span></a></li>
+            </ul>
+        </div>
+        <div class="bottom_area">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <p>1분 안에 끝나는 MYBOX 만족도 조사 !</p>
+        </div>
+    </div>
+    <!--****** 작은 이미지 클릭시 큰 이미지가 나오는곳!! *****-->
+    <div class="big_image_item">
+        <div class="top_area">
+            <div class="left">
+                <i class="fa-solid fa-arrow-left close_big_img"></i>
+                <div class="date_wrap">
+                    <p class="year"></p>
+                    <p class="time"></p>
+                </div>
+            </div>
+            <div class="right">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </div>
+        <div class="img_area">
+            <div class="img_box">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="bottom_area">
+            <i class="fa-regular fa-circle-down"></i>
+            <a id="kakao-link-btn" href="javascript:;">
+                <i class="fa-solid fa-share-nodes"></i>
+            </a>
+            <i class="fa-regular fa-trash-can"></i>
+        </div>
+    </div>
+    <!--****** 네이버 박스 메인화면 입니다!! *****-->
+    <header class="naver_box_header">
+        <h1>사진</h1>
+        <i class="fa-solid fa-moon isDark"></i>
+        <ul>
+            <li><i class="fa-regular fa-circle-check"></i></li>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li class="naver_box_main_open"><i class="fa-solid fa-user"></i></li>
+        </ul>
+    </header>
+    <main class="naver_box_main">
+        <nav>
+            <ul class="date">
+                <li>년</li>
+                <li>월</li>
+                <li>일</li>
+                <li class="check">전체</li>
+            </ul>
+            <ul class="arrow">
+                <li><i class="fa-solid fa-arrow-up"></i></li>
+                <li><i class="fa-solid fa-arrow-down"></i></li>
+            </ul>
+        </nav>
+        <div class="image_item_wrap">
+
+        </div>
+        <div class="icon_wrap">
+            <div class="show_icon">
+                <span class="show_btn">+</span>
+                <ul class="icons">
+                    <li class="icon"><i class="fa-solid fa-camera-retro"></i></li>
+                    <li class="icon">
+                        <input type="file" id="add">
+                        <label for="add"><i class="fa-regular fa-image"></i></label>
+                    </li>
+                    <li class="icon"><i class="fa-regular fa-folder-open"></i></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="naver_box_bottom">
+        <ul>
+            <li><i class="fa-solid fa-image"></i></li>
+            <li><i class="fa-solid fa-video"></i></li>
+            <li><i class="fa-solid fa-file-export"></i></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
