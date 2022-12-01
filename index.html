@@ -18,22 +18,23 @@
     <script defer src="./js/main.js"></script>
     <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
     <link rel="manifest" href="./manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            // navigator.serviceWorker.register - 서비스 워커를 등록
+            navigator.serviceWorker.register('service-worker.js')// 등록
+                .then(function (succese) {
+                    console.log(succese)
+                }).catch(function (error) {
+                    console.log('실패ㅠ', error)
+                })
+        }
+    </script>
 </head>
 <!--
     약간의 반응형 적용.
     font-size . . . 
 -->
-<script>
-    if ('serviceWorker' in navigator) {
-        // navigator.serviceWorker.register - 서비스 워커를 등록
-        navigator.serviceWorker.register('service-worker.js')// 등록
-            .then(function (succese) {
-                console.log(succese)
-            }).catch(function (error) {
-                console.log('실패ㅠ', error)
-            })
-    }
-</script>
+
 
 <body>
     <div class="all_container">
