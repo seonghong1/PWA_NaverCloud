@@ -6,8 +6,8 @@
   "name": "naverCloud_box",
   "short_name": "naverCloud",
   "orientation": "any",
-  "scope": "https://seonghong1.github.io/NaverCloud/",
-  "start_url": "https://seonghong1.github.io/NaverCloud/",
+  "scope": "https://seonghong1.github.io/pwa_NaverCloud/",
+  "start_url": "https://seonghong1.github.io/pwa_NaverCloud/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [
