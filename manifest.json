@@ -12,19 +12,14 @@
   "categories": [],
   "screenshots": [
     {
-      "src": "images/scr1.png",
-      "sizes": "359x736",
-      "type": "image/png"
+      "src": "img/scr01.png",
+      "sizes": "411x753",
+      "type": "img/png"
     },
     {
-      "src": "images/scr2.png",
-      "sizes": "356x736",
-      "type": "image/png"
-    },
-    {
-      "src": "images/scr3.png",
-      "sizes": "359x735",
-      "type": "image/png"
+      "src": "img/scr02.png",
+      "sizes": "416x753",
+      "type": "img/png"
     }
   ],
   "icons": [
