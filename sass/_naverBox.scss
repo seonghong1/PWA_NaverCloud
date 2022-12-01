@@ -854,6 +854,9 @@ body.dark_on{
     .naber_box_menu{
         background-color: rgb(48, 48, 48);
         color: white;
+        .close{
+            color: white;
+        }
         .user i{
             color: white;
         }
