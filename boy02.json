@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "title": "80GB",
+            "sub_title": "무료 30GB + ",
+            "sub_title_c":"50GB",
+            "text": "부족했던 용량을 늘리고 유료 혜택을 경험해보세요.",
+            "price": "22,000원"
+        },
+        {
+            "title": "180GB",
+            "sub_title": "무료 30GB + ",
+            "sub_title_c":"100GB",
+            "text": "부족했던 용량을 늘리고 유료 혜택을 경험해보세요.",
+            "price": "44,000원"
+        },
+        {
+            "title": "330GB",
+            "sub_title": "무료 30GB + ",
+            "sub_title_c":"300GB",
+            "text": "부족했던 용량을 늘리고 유료 혜택을 경험해보세요.",
+            "price": "75,000원"
+        },
+        {
+            "title": "2TB",
+            "sub_title": "무료 30GB + ",
+            "sub_title_c":"2TB",
+            "text": "부족했던 용량을 늘리고 유료 혜택을 경험해보세요.",
+            "price": "149,000원"
+        },
+        {
+            "title": "10TB",
+            "sub_title": "무료 30GB + ",
+            "sub_title_c":"10TB",
+            "text": "부족했던 용량을 늘리고 유료 혜택을 경험해보세요.",
+            "price": "750,000원"
+        }
+    ]
+}

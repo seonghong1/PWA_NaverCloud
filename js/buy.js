@@ -1,4 +1,3 @@
-
 //bar item
 const bar_item = document.querySelectorAll('.bar_item');
 const container_wrap = document.querySelector('.container_wrap')
@@ -40,7 +39,7 @@ btn2.addEventListener('click',function(){
     history.pushstate('', 'Hello World', 'buy___022.html');
 })
 */
-
+/*
 $(document).ready(function(){
     $('.buy_header a').on('click',function(e){
         e.preventDefault();
@@ -50,7 +49,7 @@ $(document).ready(function(){
        $('.container_wrap').load(aa + ' .buy01_container');
     })
 });
-
+*/
 
 //buy_01 선물버튼 클릭
 const buy01_btn = document.querySelectorAll('.toggle button')

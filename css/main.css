@@ -1932,11 +1932,6 @@ body.dark_on .naber_box_menu .midle_area li:nth-of-type(5)::after {
   flex-direction: column;
   justify-content: space-between;
 }
-.buy_header i {
-  position: absolute;
-  left: 10px;
-  font-size: 30px;
-}
 .buy_header h1 {
   background-color: #4078FF;
   padding-left: 50px;
@@ -1945,6 +1940,11 @@ body.dark_on .naber_box_menu .midle_area li:nth-of-type(5)::after {
   align-items: center;
   font-weight: 500;
   font-size: 20px;
+}
+.buy_header h1 a {
+  position: absolute;
+  left: 10px;
+  font-size: 30px;
 }
 .buy_header ul {
   display: flex;
@@ -2136,20 +2136,72 @@ body.dark_on .naber_box_menu .midle_area li:nth-of-type(5)::after {
 }
 
 .buy__02 .advertise {
-  height: 150px;
+  height: auto;
   position: relative;
+  margin-bottom: 7%;
+}
+.buy__02 .advertise p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.buy__02 .advertise p span {
+  display: block;
+  color: #4078FF;
+}
+.buy__02 .advertise p a {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: white;
+  color: #4078FF;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 15px;
+  display: inline-block;
 }
 .buy__02 img {
   object-fit: cover;
   width: 100%;
 }
-.buy__02 p {
-  position: absolute;
-  top: 30%;
-  left: 50%;
+.buy__02 .article_wrap article {
+  text-align: center;
+  background-color: #ebf0f5;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0 auto 30px;
+  padding: 15px;
 }
-.buy__02 p span {
-  display: block;
+.buy__02 .article_wrap article h2 {
+  color: rgb(44, 44, 44);
+  font-size: 22px;
+  font-weight: 700;
+}
+.buy__02 .article_wrap article h3 {
+  color: gray;
+  margin: 10px 0 15px;
+  font-size: 15px;
+}
+.buy__02 .article_wrap article span {
+  color: #4078FF;
+  font-weight: 700;
+}
+.buy__02 .article_wrap article p {
+  font-size: 13px;
+  color: gray;
+}
+.buy__02 .article_wrap article button {
+  margin-top: 20px;
+  background-color: #4078FF;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 30px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

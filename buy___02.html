@@ -21,11 +21,12 @@
 <body>
     <header class="buy_header">
         <h1>
-            <i class="fa-solid fa-xmark close"></i>
+           <a href="./naver_box_main.html"><i class="fa-solid fa-xmark close"></i></a> 
+            용량관리
         </h1>
         <ul>
-            <li class="active"><a href="buy___01.html">내 이용현황</a></li>
-            <li><a href="buy___02.html">이용권 구매</a></li>
+            <li><a href="buy___01.html">내 이용현황</a></li>
+            <li><a  class="active" href="buy___02.html">이용권 구매</a></li>
             <li><a href="buy___03.html">쿠폰 등록</a></li>
         </ul>
     </header>
@@ -33,24 +34,52 @@
         <main class="buy01_container">
             <div class="buy__02">
                 <div class="advertise">
-                    <img src="img/이용권01.png" alt="">
-                    <p>
-                        <span class="black_text">50GB를 무조건 더 드립니다!</spn>
-                        <span class="color_text">130GB를 180GB로 자동 UP</span>
-                        <span class="move">바로보기</span>
+                    <img id='img_area' src="" alt="">
+                    <p class="text_area">
+
                     </p>
                 </div>
                 <div class="article_wrap">
-                    <article>
-                        <h2></h2>
-                    </article>
                 </div>
             </div>
         </main>
     </div>
 </body>
 <script>
+    const xhr = new XMLHttpRequest();
 
+    xhr.onload = function(){
+        if(xhr.status == 200){
+            respOBJ = JSON.parse(xhr.responseText)
+            let jsonContent = '';
+            for(let i = 0; i < respOBJ.data.length; i++){
+                jsonContent += `<article><h2>${respOBJ.data[i].title}</h2>`
+                jsonContent +=  `<h3>${respOBJ.data[i].sub_title}<span>${respOBJ.data[i].sub_title_c}<span></h3>`
+                jsonContent += `<p>${respOBJ.data[i].text}</p>`
+                jsonContent += `<button>${respOBJ.data[i].price}</button></article>`
+            }
+        document.querySelector('.article_wrap').innerHTML =  jsonContent  
+        }
+    }
+    xhr.open('get','boy02.json', true)
+    xhr.send()
+
+    const img_area = document.getElementById('img_area')
+    const text_area = document.querySelector('.text_area')
+    const imgs = [
+        'img/이용권01.png',
+        'img/이용권02.png',
+        'img/이용권03.jpg'
+    ]
+    const imgs_text = [
+        '50기가를 무조건 더 드립니다!</br><span>130GB를 180GB로 자동 UP</span><a href=#>바로 보기</a>',
+        '알뜰하게 부담 없이~ 80GB</br><span>초고용량으로 플렉스~ 10TB</span><a href=#>바로 보기</a>',
+        '남은 용량 가족과 함께 사용할 수 있는</br><span>가족 스토리지를 이용해 보세요</span><a href=#>자세히 알아보기</a>'
+    ]
+    console.log(imgs[1])
+    let random = Math.floor(Math.random() * imgs.length)
+    img_area.setAttribute('src',imgs[random])
+    text_area.innerHTML = imgs_text[random]
 </script>
 
 </html>
