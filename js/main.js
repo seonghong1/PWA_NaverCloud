@@ -117,7 +117,7 @@ window.addEventListener('scroll', function () {
         section1.classList.add('on')
     }
 })
-if (num_item1 > 7401) {
+if (num_item1 > 10000) {
     clearInterval(set1())
     clearInterval(set2())
     clearInterval(set3())
