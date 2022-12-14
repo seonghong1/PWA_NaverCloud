@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="event_header">
+        <div class="close">
+            <a href="naver_box_main.html"> <i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <h1>이벤트</h1>
+        <p>특별한 이벤트, 매일매일 즐거운 혜택 !</p>
+        <div class="btn_wrap">
+            <button class="active">진행중인 이벤트</button>
+            <button class="">당첨자 발표</button>
+        </div>
+    </header>
+    <main class="event_main">
+        <select name="" id="">
+            <option value="">전체 이벤트</option>
+            <option value="">진행중인 이벤트</option>
+            <option value="">종료된 이벤트</option>
+        </select>
+        <article>
+            <a href="naver_box_roulette.html">
+                <div class="d_day"></div>
+                <div class="state">NEW</div>
+                <div class="img_area">
+                    <img src="img/크리스마스.jpg" alt="">
+                </div>
+                <h2 class="event_name">크리스마스 룰렛 이벤트 !</h2>
+                <div class="date">2022-11-25 ~ 2023-12-25</div>
+            </a>
+        </article>
+    </main>
+</body>
+<script>
+    const d_day = document.querySelector('.d_day')
+
+    function D_DAY() {
+        const now = new Date();
+        const thisDay = new Date('2022-12-25')
+
+        const result_date = thisDay - now;
+        const result_date_Day = Math.floor(result_date / (1000 * 60 * 60 * 24))
+
+        d_day.textContent = `D-${result_date_Day}`
+    }
+    D_DAY()
+</script>
+
+</html>

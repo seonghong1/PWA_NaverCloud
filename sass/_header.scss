@@ -1,3 +1,23 @@
+@mixin click_opacity {
+    animation-name: click_opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@mixin click_opacity_ani {
+    @keyframes click_opacity {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+
 .header {
     position: fixed;
     z-index: 20;
@@ -23,6 +43,8 @@
 }
 
 .header_nav {
+
+
     ul {
         display: flex;
 
@@ -184,6 +206,12 @@
                 width: 100%;
                 display: block;
             }
+
+            .naver_box {
+                @include click_opacity;
+            }
+
+            @include click_opacity_ani
         }
     }
 
@@ -202,17 +230,19 @@
         background-color: rgb(226, 243, 226);
 
         .swiper-slide {
-            
+
             background: {
                 image: url(../img/광고1.jpg);
                 size: contain;
                 repeat: no-repeat;
                 background-position: top center;
             }
-            &:nth-of-type(2){
+
+            &:nth-of-type(2) {
                 background-image: url(../img/광고2.jpg);
             }
-            &:nth-of-type(3){
+
+            &:nth-of-type(3) {
                 background-image: url(../img/광고3.jpg);
             }
         }

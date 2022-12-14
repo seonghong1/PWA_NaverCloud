@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="login_ani">
+        <div class="login_ani_wrap">
+            <img class="bg" src="img/naver_box.png" alt="">
+            <div class="loading_bar"></div>
+            <p class="num">0 %</p>
+            <img src="img/main_logo_w.svg" alt="" class="logo">
+        </div>
+    </div>
+    <div class="login_wrap">
+        <img src="img/naver_box.png" alt="">
+        <form action="naver_box_main.html">
+            <input type="text" placeholder="아이디">
+            <input type="text" placeholder="비밀번호">
+            <div class="check_wrap">
+                <input type="checkbox" id="auto_login">
+                <label for="auto_login">로그인 상태 유지</label>
+            </div>
+            <button>로그인</button>
+        </form>
+        <div class="search">아이디 찾기<span>ㅣ</span>비밀번호 찾기</div>
+    </div>
+
+</body>
+<script>
+    //로그인 로딩애니메이션
+    const num = document.querySelector('.login_ani .num')
+
+    let login_num = 2;
+
+    const inc_login_num = () => {
+        num.innerHTML = `${login_num}%`
+        login_num += 1
+        if (login_num > 100) {
+            return num.innerHTML = '100%'
+        }
+    }
+    setInterval(inc_login_num, 25)
+</script>
+
+</html>

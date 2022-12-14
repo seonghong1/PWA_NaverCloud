@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/87ec544e05.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="roulette_event">
+      
+      <a href="naver_box_event.html"><i class="fa-solid fa-arrow-left-long close"></i></a>
+      <div class="rudolf rudolf1">
+        <img src="img/루돌프.png" alt="">
+      </div>
+      <div class="rudolf rudolf2">
+        <img src="img/루돌프.png" alt="">
+      </div>
+        <div class="roulette_container">
+          <div class="arrow"><i class="fa-solid fa-play"></i></div>
+          <div class="tree_left tree">
+            <img src="img/트리.png" alt="">
+          </div>
+          <div class="tree_right tree">
+            <img src="img/트리.png" alt="">
+          </div>
+            <canvas width="300px" height="300px"></canvas>
+            <button onclick="rotate()">START</button>
+        </div>
+    </div>
+</body>
+<script>
+
+
+const $c = document.querySelector("canvas");
+const ctx = $c.getContext(`2d`);
+
+
+const product = [
+  "꽝", "당첨", '꽝', "당첨", "꽝","당첨",
+];
+
+const colors = [  "#ba302b", "#0e733b", "#ba302b", "#0e733b", "#ba302b"];
+
+const newMake = () => {
+    const [cw, ch] = [$c.width / 2, $c.height / 2];
+    const arc = Math.PI / (product.length / 2);
+  
+    for (let i = 0; i < product.length; i++) {
+      ctx.beginPath();
+      ctx.fillStyle = colors[i % (colors.length -1)];
+      ctx.moveTo(cw, ch);
+      ctx.arc(cw, ch, cw, arc * (i - 1), arc * i);
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    ctx.fillStyle = "#fff";
+    ctx.font = "18px Pretendard";
+    ctx.textAlign = "center";
+
+    for (let i = 0; i < product.length; i++) {
+      const angle = (arc * i) + (arc / 2);
+
+      ctx.save()  ;
+
+      ctx.translate(
+        cw + Math.cos(angle) * (cw - 50),
+        ch + Math.sin(angle) * (ch - 50),
+      );
+
+      ctx.rotate(angle + Math.PI / 2);
+
+      product[i].split(" ").forEach((text, j) => {
+        ctx.fillText(text, 0, 30 * j);
+      });
+
+      ctx.restore();
+    }
+}
+
+const rotate = () => {
+  $c.style.transform = `initial`;
+  $c.style.transition = `initial`;
+  
+  setTimeout(() => {
+    
+    const ran = Math.floor(Math.random() * product.length);
+
+    const arc = 360 / product.length;
+    const rotate = (ran * arc) + 3600 + (arc * 3) - (arc/4);
+    
+    $c.style.transform = `rotate(-${rotate}deg)`;
+    $c.style.transition = `2s`;
+    
+    setTimeout(() => alert(`룰렛의 결과는 : ${product[ran]} 입니다 ~`), 2000);
+  }, 1);
+};
+
+newMake();
+
+
+</script>
+
+</html>
